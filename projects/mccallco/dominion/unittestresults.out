@@ -1,0 +1,118 @@
+Result for running unit tests:
+unittest1.c:
+TESTING shuffle(): 
+Testing function for player -1:
+    Shuffle Failed.     Test pass.
+Testing function for player 10:
+    Shuffle Failed.     Test pass.
+Testing double shuffle of player 1:
+Found 0 matches.    Test PASS.  
+Testing shuffle of player 1 vs player 2:
+Found 0 matches.    Test PASS.  
+Testing shuffle of player 1 with empty discard:
+Found 1 matches.    Test PASS.  
+File 'dominion.c'
+Lines executed:16.19% of 562
+Creating 'dominion.c.gcov'
+
+unittest2.c:
+Comparing 1 and 0:
+    recieved return 1, expected 1.    Test pass.
+Comparing 5 and 5:
+    recieved return 0, expected 0.    Test pass.
+Comparing 8 and 9:
+    recieved return -1, expected -1.   Test pass.
+Comparing A and ?:
+    Recieved return -1,    Test FAILURE.
+Comparing a and a:
+    Recieved return 1,    Test FAILURE.
+Comparing + and z:
+    Recieved return -1, expected -1.   Test pass.
+File 'dominion.c'
+Lines executed:16.19% of 562
+Creating 'dominion.c.gcov'
+
+unittest3.c:
+Testing function buy with 0 buys.
+    No cards bought. 0 buys remaining.     Test pass.
+Testing function buy with 5 buys.
+    4 buys remaining.      Test pass.
+Testing estate buy when there are 0 estate cards remaining.
+    No cards bought. Now 0 estates in supply.      Test Pass.
+Testing estate buy when there are 1 estate cards remaining.
+    Now 0 estates in supply.       Test Pass.
+Checking bought card went to discard.
+    7 estate cards in discard before buy, 8 estates after buy.        Test pass.
+Buying cards with 0 coins.
+    No cards bought. 0 coins remaining.        Test pass.
+Buying cards with 10 coins.
+    Bought card for 5. 5 coins remaining.         Test pass.
+File 'dominion.c'
+Lines executed:21.00% of 562
+Creating 'dominion.c.gcov'
+
+unittest4.c:
+Testing for invalid player number.
+    Player -4 has 0 estate cards.      Test pass.
+Testing for invalid card.
+    Player has 0 invalid cards.        Test pass.
+Testing adding 3 estate cards to hand.
+    Player had 3 estate cards, and now had 6 estate cards.        Test pass.
+Testing adding 3 estate cards to deck.
+    Player had 6 estate cards, and now had 9 estate cards.        Test pass.
+Testing adding 3 estate cards to discard.
+    Player had 9 estate cards, and now has 11 estate cards.        Test FAILURE.
+File 'dominion.c'
+Lines executed:23.49% of 562
+Creating 'dominion.c.gcov'
+
+cardtest1.c:
+Testing function with invalid handpos.
+    Number of cards gained from Smithy: 4.    Test FAILURE.
+Testing function with invalid handpos.
+    Number of cards gained from Smithy: -1.    Test FAILURE.
+Testing function with empty deck.
+    Number of cards gained from Smithy: -1.    Test FAILURE.
+File 'dominion.c'
+Lines executed:27.94% of 562
+Creating 'dominion.c.gcov'
+
+cardtest2.c:
+Testing function with no treasure cards in deck.
+    Number of cards gained from adventurer: 0.    Test pass.
+Testing function with empty deck.
+    Number of cards gained from adventurer: 0.    Test FAILURE.
+Testing function with appropriate starting position.
+    Number of cards gained from adventurer: 2.    Test pass.
+Testing function with empty starting hand.
+    Number of cards gained from adventurer: 2.    Test pass.
+File 'dominion.c'
+Lines executed:31.49% of 562
+Creating 'dominion.c.gcov'
+
+cardtest3.c:
+Testing function with empty deck.
+    Number of cards player gained from Councilroom: -1.    Test FAILURE.
+    Number of buys gained: 1    Test pass.
+    Number of cards other player gained from Councilroom: 1.   Test pass.
+Testing function with standard starting conditions.
+    Number of cards player gained from Councilroom: 3.    Test FAILURE.
+    Number of buys gained: 1    Test pass.
+    Number of cards other player gained from Councilroom: 1.   Test pass.
+File 'dominion.c'
+Lines executed:33.10% of 562
+Creating 'dominion.c.gcov'
+
+cardtest4.c:
+Testing function with ideal conditions.
+Gained 0 card from Feast.      Test FAILURE.
+Testing function with empty hand.
+Gained 0 card from Feast.      Test FAILURE.
+Testing function with empty supply.
+Gained 0 card from Feast.      Test FAILURE.
+Testing function with empty supply.
+Gained 0 card from Feast.      Test FAILURE.
+File 'dominion.c'
+Lines executed:35.05% of 562
+Creating 'dominion.c.gcov'
+
