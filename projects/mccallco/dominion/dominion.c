@@ -58,7 +58,7 @@ void switchCouncilRoom(struct gameState *state, int currentPlayer, int handPos){
 	      drawCard(i, state);
 	    }
 	}
-			
+
   //put played card in played card pile
   discardCard(handPos, currentPlayer, state, 0);
   return;

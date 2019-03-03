@@ -79,5 +79,23 @@ unittestresults: unittest1.c unittest2.c unittest3.c unittest4.c cardtest1.c car
 	./cardtest4 >> unittestresults.out
 	gcov dominion.c >> unittestresults.out
 
+randomtests: randomtestcard1.c randomtestcard2.c randomtestadventurer.c dominion.o 
+
+	echo "Random tests results:" > randomtestresults.out
+
+	echo "randomtestcard1.c: " >> randomtestresults.out
+	gcc -o randomtestcard1 randomtestcard1.c -g dominion.o rngs.o $(CFLAGS)
+	./randomtestcard1 >> randomtestresults.out
+	
+	echo "randomtestcard2.c: " >> randomtestresults.out 
+	gcc -o randomtestcard2 randomtestcard2.c -g dominion.o rngs.o $(CFLAGS)
+	./randomtestcard2 >> randomtestresults.out
+
+	echo "randomtestadventurer.c: " >> randomtestresults.out
+	gcc -o randomtestadventurer randomtestadventurer.c -g dominion.o rngs.o $(CFLAGS)
+	./randomtestadventurer >> randomtestresults.out
+
+	gcov dominion.c >> randomtestresults.out
+
 clean:
 	rm -f *.o playdom.exe playdom player player.exe  *.gcov *.gcda *.gcno *.so *.out testDrawCard testDrawCard.exe
